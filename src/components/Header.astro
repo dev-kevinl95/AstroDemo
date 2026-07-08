@@ -6,17 +6,15 @@ import ThemeIcon from "./ThemeIcon.astro";
 
 <header>
   <nav>
-    <div>
-      <ThemeIcon />
+    <div class="nav-left">
       <Menu />
     </div>
-    <Navigation />
+    <div class="nav-center">
+      <Navigation />
+    </div>
+    <div class="nav-right">
+      <ThemeIcon />
+    </div>
   </nav>
 </header>
 
-<style>
-  div {
-    display: flex;
-    justify-content: space-between;
-  }
-</style>

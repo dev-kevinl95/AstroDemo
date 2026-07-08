@@ -21,16 +21,19 @@ const pageTitle = "My Astro Learning Blog";
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-      {
-        allPosts.map((post: any) => (
-          <BlogPost url={post.url} title={post.frontmatter.title} />
-        ))
-      }
+    <main class="page-content">
+      
+      <h1>{pageTitle}</h1>
+      <p>This is where I will post about my journey learning Astro.</p>
+      <ul>
+        {
+          allPosts.map((post: any) => (
+            <BlogPost url={post.url} title={post.frontmatter.title} />
+          ))
+        }
     </ul>
     <Footer />
+  </main>
     <script>
       import "../scripts/menu.js";
     </script>

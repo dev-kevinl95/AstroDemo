@@ -24,20 +24,34 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 <style>
   a {
-    color: #00539f;
+    color: var(--primary-strong, #2563eb);
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 1rem 0 1.25rem;
   }
 
   .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
+    margin: 0;
+    border: 1px solid var(--border, rgba(20, 33, 61, 0.12));
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.95rem;
+    background: rgba(59, 130, 246, 0.08);
+  }
+
+  .tag a {
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  .meta {
+    color: var(--muted, #5f6f8f);
+    font-size: 0.95rem;
+    margin: 0.35rem 0 1rem;
   }
 </style>
